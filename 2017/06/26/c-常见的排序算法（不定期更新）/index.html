@@ -87,15 +87,16 @@
 
 
 
-<meta name="description" content="C++,IT互联网">
-<meta property="og:type" content="website">
-<meta property="og:title" content="C++学习小窝">
-<meta property="og:url" content="http://Orange.github.io/index.html">
+<meta name="description" content="整理一下自己学过的排序算法，顺便当复习了 (一)冒泡排序BubbleSort思路：运用双层for循环，外层用来判定一共需要排序几次，内层决定每次排序的终点位置;注意事项：当把排序当封装时，一定要运用引用或指针，保证交换改变了原本的数据;完整代码演示:123456789101112131415161718192021222324252627282930#include&amp;lt;iostream&amp;gt;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="c++常见的排序算法（不定期更新）">
+<meta property="og:url" content="http://Orange.github.io/2017/06/26/c-常见的排序算法（不定期更新）/index.html">
 <meta property="og:site_name" content="C++学习小窝">
-<meta property="og:description" content="C++,IT互联网">
+<meta property="og:description" content="整理一下自己学过的排序算法，顺便当复习了 (一)冒泡排序BubbleSort思路：运用双层for循环，外层用来判定一共需要排序几次，内层决定每次排序的终点位置;注意事项：当把排序当封装时，一定要运用引用或指针，保证交换改变了原本的数据;完整代码演示:123456789101112131415161718192021222324252627282930#include&amp;lt;iostream&amp;gt;">
+<meta property="og:updated_time" content="2017-06-26T09:20:34.691Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C++学习小窝">
-<meta name="twitter:description" content="C++,IT互联网">
+<meta name="twitter:title" content="c++常见的排序算法（不定期更新）">
+<meta name="twitter:description" content="整理一下自己学过的排序算法，顺便当复习了 (一)冒泡排序BubbleSort思路：运用双层for循环，外层用来判定一共需要排序几次，内层决定每次排序的终点位置;注意事项：当把排序当封装时，一定要运用引用或指针，保证交换改变了原本的数据;完整代码演示:123456789101112131415161718192021222324252627282930#include&amp;lt;iostream&amp;gt;">
 
 
 
@@ -123,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://Orange.github.io/"/>
+  <link rel="canonical" href="http://Orange.github.io/2017/06/26/c-常见的排序算法（不定期更新）/"/>
 
 
 
 
 
-  <title> C++学习小窝 </title>
+  <title> c++常见的排序算法（不定期更新） | C++学习小窝 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -154,9 +155,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -239,9 +238,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -271,10 +270,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2017/06/26/c-常见的排序算法（不定期更新）/" itemprop="url">
-                  c++常见的排序算法（不定期更新）
-                </a>
+                c++常见的排序算法（不定期更新）
               
             
           </h1>
@@ -325,28 +321,33 @@
       
 
       
-        
-          
-            <p>整理一下自己学过的排序算法，顺便当复习了</p>
+        <p>整理一下自己学过的排序算法，顺便当复习了</p>
 <h2 id="一-冒泡排序BubbleSort"><a href="#一-冒泡排序BubbleSort" class="headerlink" title="(一)冒泡排序BubbleSort"></a>(一)冒泡排序BubbleSort</h2><p>思路：运用双层for循环，外层用来判定一共需要排序几次，内层决定每次排序的终点位置;<br>注意事项：当把排序当封装时，一定要运用引用或指针，保证交换改变了原本的数据;<br>完整代码演示:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include&lt;iostream&gt;</span></div><div class="line"><span class="comment">#include&lt;vector&gt;</span></div><div class="line">using namespace std;</div><div class="line">//！！！注意，当把排序当封装时，一定要运用引用或指针，保证交换改变了原本的数据;</div><div class="line">void BubbleSort(vector&lt;int&gt; &amp;a,int num)</div><div class="line">&#123;</div><div class="line">	<span class="keyword">for</span> (int i = 0; i &lt; num; i++)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">for</span> (int j = 0; j &lt;num-i-1 ; j++)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">if</span> (a[j] &gt; a[j + 1])</div><div class="line">			&#123;</div><div class="line">				swap(a[j], a[j + 1]);</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">int <span class="function"><span class="title">main</span></span>()</div><div class="line">&#123;</div><div class="line">	vector&lt;int&gt;a = &#123; 2,4,1,5,7,4,9,3 &#125;;</div><div class="line">	int num;</div><div class="line">	num=a.size();</div><div class="line">	BubbleSort(a, num);</div><div class="line">	<span class="keyword">for</span> (int i = 0; i &lt; num; i++)</div><div class="line">	&#123;</div><div class="line">		cout &lt;&lt; a[i] &lt;&lt; <span class="string">" "</span> ;</div><div class="line">	&#125;</div><div class="line">	cout &lt;&lt; endl;</div><div class="line">	<span class="built_in">return</span> 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h2 id="二-快速排序QuitSort"><a href="#二-快速排序QuitSort" class="headerlink" title="(二)快速排序QuitSort"></a>(二)快速排序QuitSort</h2><p>思路：定义两个指针（left，right），分别指向数组的最左和右边，将temp赋予数组第一个元素，temp用来作为本轮排序的分界线，将比temp小的元素放在左边，比temp大的放在右边，具体的做法为：<br>（1）先把a[left]赋值给temp，相当于在left处刨了一个空白的坑，值给temp处保存，再保证left<right的情况下，(这句话不仅在函数开头要写，每次判断都要加上，否则停止运行)先比较right处的元素和temp的大小，按照规则： ①="">temp，则right–移动指针，直到出现&lt;=temp的时候，调到②<br>②&lt;=temp把a[right]放在坑处-&gt;即a[left]，直接覆盖就好。（注意，此处有=，否则停止运行）<br><strong><strong>由此，可以看出直接用while判断很方便，不用if*</strong></strong><br>此时，再比较left和temp的大小<br>①<temp，left++，直到出现>temp的时候，跳到②<br>②&gt;=temp把a[left]放在坑处-&gt;即a[right]，直接覆盖就好</temp，left++，直到出现></right的情况下，(这句话不仅在函数开头要写，每次判断都要加上，否则停止运行)先比较right处的元素和temp的大小，按照规则：></p>
 <p>至此，第一轮排序完成，此时的数组，temp左侧均小于temp，右侧均大于temp。<br>（2）将temp的值放入此时的left中，把坑填上。<br>（3）递归调用<br>完整代码:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include &lt;iostream&gt;</span></div><div class="line"></div><div class="line">using namespace std;</div><div class="line"></div><div class="line">void Qsort(int* a, int start, int end)</div><div class="line">&#123;</div><div class="line">	//必须要写，不写停止运行</div><div class="line">	<span class="keyword">if</span> (start &gt;= end)</div><div class="line">	&#123;</div><div class="line">		<span class="built_in">return</span>;</div><div class="line">	&#125;</div><div class="line">	int left = start;</div><div class="line">	int right = end;</div><div class="line">	int temp = a[left];</div><div class="line"></div><div class="line">	<span class="keyword">while</span> (left &lt; right)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">while</span> (left &lt; right &amp;&amp; a[right] &gt;= temp)//left&lt;right必须要写，a[right]&gt;temp需要写=，否则停止运行</div><div class="line">		&#123;</div><div class="line">			--right;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		a[left] = a[right];</div><div class="line"></div><div class="line">		<span class="keyword">while</span> (left &lt; right &amp;&amp; a[left] &lt;= temp)</div><div class="line">		&#123;</div><div class="line">			++left;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		a[right] = a[left];</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">	a[left] = temp;</div><div class="line">	Qsort(a, start, left - 1);</div><div class="line">	Qsort(a, left + 1, end);</div><div class="line">&#125;</div><div class="line">int <span class="function"><span class="title">main</span></span>()</div><div class="line">&#123;</div><div class="line">	int a[] = &#123; 4,2,1,5,7,4,9,3 &#125;;//测试用例包含重复值以及重复值为第一位</div><div class="line">	int num;</div><div class="line">	num = sizeof(a) / sizeof(a[0]);//很6的写法</div><div class="line">	Qsort(a, 0,num - 1);</div><div class="line"></div><div class="line">	<span class="keyword">for</span> (int i = 0; i &lt; num; i++)</div><div class="line">	&#123;</div><div class="line">		cout &lt;&lt; a[i] &lt;&lt; <span class="string">" "</span>;</div><div class="line">	&#125;</div><div class="line">	cout &lt;&lt; endl;</div><div class="line"></div><div class="line">	<span class="built_in">return</span> 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>至于快速排序使用vector排序的正确代码，还没弄出来2333，有时间再弄吧</p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <div>
+      
+        
+
       
     </div>
 
@@ -354,401 +355,38 @@
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://Orange.github.io/2017/06/22/UML各类图形及画法（不定期更新）/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="OrangeStory">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://a1.qpic.cn/psb?/V12wPsEQ2olK6d/LTcaZFHcxH02lfwARZMSHmtgDAxkedzv4YLs7vHjk9A!/b/dHEBAAAAAAAA&bo=xgDGAAAAAAAFByQ!&rf=viewer_4">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C++学习小窝">
-    </span>
-
-    
-      <header class="post-header">
-
         
-        
-          <h1 class="post-title" itemprop="name headline">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/06/22/UML各类图形及画法（不定期更新）/" rel="next" title="UML各类图形及画法（不定期更新）+可行性分析计算">
+                <i class="fa fa-chevron-left"></i> UML各类图形及画法（不定期更新）+可行性分析计算
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2017/06/22/UML各类图形及画法（不定期更新）/" itemprop="url">
-                  UML各类图形及画法（不定期更新）+可行性分析计算
-                </a>
-              
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-22T13:59:18+08:00">
-                2017-06-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>写在前面：本篇内容来自于复习过程的笔记和老师的pdf，可能会有很多错误，仅作为个人留存和借鉴。</p>
-<h2 id="一-网络图"><a href="#一-网络图" class="headerlink" title="(一)网络图"></a>(一)网络图</h2><p>网络图是由作业（箭线）、事件（又称节点）和路线三个因素组成的。<br>关键路线：最长的路线<br>原则:开始与结束节点唯一<br>2个相邻的节点之间，最多一条箭线相连<br>不能有回路<br>下面是一个网络图的示例：<br><img src="/images/uml/网络图示例.png" alt="&quot;网络图示例&quot;"><br>3点估计法计算预期时间：T=（乐观时间+4*最可能时间+悲观时间）/6<br>当一个事件D由B,C为前置时，2种画法：<br><img src="/images/uml/网络图画法技巧.png" alt="&quot;网络图画法技巧&quot;"></p>
-<h2 id="二-用例图"><a href="#二-用例图" class="headerlink" title="(二)用例图"></a>(二)用例图</h2><p>使用viso2010画一个用例图的步骤：<br>文件-&gt;新建-&gt;软件和数据库-&gt;UML模型图-&gt;即可在左侧找到用例图(类似方法找到大部分uml图)<br><img src="/images/uml/用例图.png" alt="&quot;一个用例图&quot;"></p>
-<h2 id="三-甘特图"><a href="#三-甘特图" class="headerlink" title="(三)甘特图"></a>(三)甘特图</h2><p>甘特图的纵坐标代表活动，横坐标代表时间。从例图可以看出，1月时，有ABE 3个活动正在进行<br><img src="/images/uml/甘特图.png" alt="&quot;甘特图&quot;"></p>
-<h2 id="四-E-R图（实体-联系图）"><a href="#四-E-R图（实体-联系图）" class="headerlink" title="(四)E-R图（实体-联系图）"></a>(四)E-R图（实体-联系图）</h2><p>viso画E-R图见百度经验的链接（我真是懒啊）<br><a href="https://jingyan.baidu.com/article/ae97a6468ba98fbbfd461d9f.html" target="_blank" rel="external">https://jingyan.baidu.com/article/ae97a6468ba98fbbfd461d9f.html</a><br>给一个画好的示例：<br><img src="/images/uml/e-r图.png" alt="&quot;e-r图&quot;"><br>画e-r图时，应先确认好有几个实体，然后确定实体之间的联系，并记得带上属性和多对多还是1对多的关系。</p>
-<h2 id="五-数据流图"><a href="#五-数据流图" class="headerlink" title="(五)数据流图"></a>(五)数据流图</h2><p>使用viso2010画一个数据流图的步骤：<br>文件-&gt;新建-&gt;软件和数据库-&gt;数据流模型图-&gt;即可在左侧找到<br><img src="/images/uml/数据流图.png" alt="&quot;数据流图&quot;"><br>在单张数据流图时，必须注意以下原则：（矩形是实体，圆角矩形是加工，缺口矩形是存储文件）<br>1.一个加工的输出数据流不应与输入数据流同名，即使它们的组成成分相同。<br>2.保持数据守恒。也就是说，一个加工所有输出数据流中的数据必须能从该加工的输入数据流中直接获得，或者说是通过该加工能产生的数据。<br>3.每个加工必须既有输入数据流，又有输出数据流。<br>4.所有的数据流必须以一个外部实体开始，并以一个外部实体结束。<br>5.外部实体之间不应该存在数据流</p>
-<p>数据流图分层时就是把某个加工细化，应注意保证分解时输入和输出流不变。<br>比如对于一个订票系统，输入流是客户id，输出票信息，在对这个系统细分时，必须保证分完的图中，左右输入输出只有客户id和票信息，至于中间细分的数据流随意。<br>本质上，分层的逆过程就是封装。</p>
-<h2 id="结构图"><a href="#结构图" class="headerlink" title="结构图"></a>结构图</h2><p>没什么好说的，直接粘老师的复习文档了….<br><img src="/images/uml/结构图1.png" alt="&quot;结构图1&quot;"><br><img src="/images/uml/结构图2.png" alt="&quot;结构图2&quot;"></p>
-<h2 id="程序流程图"><a href="#程序流程图" class="headerlink" title="程序流程图"></a>程序流程图</h2><p>使用viso2010画一个数据流图的步骤：<br>文件-&gt;新建-&gt;基本流程图-&gt;即可在左侧找到<br><img src="/images/uml/程序流程图1.png" alt="&quot;程序流程图1&quot;"><br><img src="/images/uml/程序流程图2.png" alt="&quot;程序流程图2&quot;"></p>
-<h2 id="（附加）可行性分析"><a href="#（附加）可行性分析" class="headerlink" title="（附加）可行性分析"></a>（附加）可行性分析</h2><p>可行性分析分为：经济，运行，技术，法律，文化，进度可行性分析<br>其中经济可行性分析有：投资回收分析 投资回报率 净现值<br>[货币时间价值（Time Value of Money）]是上述三种技术共同使用是一个概念。货币时间价值认为今天的1美元比一年后的1美元更有价值<br>– 以2%的利益率投资100美元一年得到102美元<br>– 因此，今天拥有100美元和在一年后的102美元表示相同的价值<br>– 假定从现在开始两年后实现20,000美元的收益，如果当前投资回报率为10%，那么估计当前拥有16,528美元<br><img src="/images/uml/现值.png" alt="&quot;现值&quot;"><br><img src="/images/uml/投资回报率.png" alt="&quot;投资回报率&quot;"><br><img src="/images/uml/净现值.png" alt="&quot;净现值&quot;"></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://Orange.github.io/2017/06/14/MyFirst/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="OrangeStory">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://a1.qpic.cn/psb?/V12wPsEQ2olK6d/LTcaZFHcxH02lfwARZMSHmtgDAxkedzv4YLs7vHjk9A!/b/dHEBAAAAAAAA&bo=xgDGAAAAAAAFByQ!&rf=viewer_4">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C++学习小窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/06/14/MyFirst/" itemprop="url">
-                  MyFirst
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-14T10:38:37+08:00">
-                2017-06-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Hello-World!今天开始让世界看到自己</p>
-
-          
-        
+    <div class="post-spread">
       
     </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://Orange.github.io/2017/06/14/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="OrangeStory">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://a1.qpic.cn/psb?/V12wPsEQ2olK6d/LTcaZFHcxH02lfwARZMSHmtgDAxkedzv4YLs7vHjk9A!/b/dHEBAAAAAAAA&bo=xgDGAAAAAAAFByQ!&rf=viewer_4">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C++学习小窝">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/06/14/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-14T08:30:51+08:00">
-                2017-06-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
@@ -756,6 +394,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -775,8 +417,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://a1.qpic.cn/psb?/V12wPsEQ2olK6d/LTcaZFHcxH02lfwARZMSHmtgDAxkedzv4YLs7vHjk9A!/b/dHEBAAAAAAAA&bo=xgDGAAAAAAAFByQ!&rf=viewer_4"
@@ -820,6 +471,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-冒泡排序BubbleSort"><span class="nav-number">1.</span> <span class="nav-text">(一)冒泡排序BubbleSort</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-快速排序QuitSort"><span class="nav-number">2.</span> <span class="nav-text">(二)快速排序QuitSort</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -934,6 +601,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
