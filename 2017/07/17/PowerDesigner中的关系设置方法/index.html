@@ -87,16 +87,23 @@
 
 
 
-<meta name="description" content="Hello-World!今天开始让世界看到自己">
+<meta name="description" content="（一）CDM的设置 关系的设置首先由2行文字，通过更改各项设置文字会变化，可以看文字的改变是否符合自己的预期效果来确定更改否正确然后是3大版块①版块用来说明2实体间的多对多关系,如果选择1-1则会激活DomiantRole,此时可以选择是谁主表。其余两个版块的②Dependent(依赖)关系判断Dependent(依赖)关系，如果B表dependent于A表，则A的主键进入B表做为外键后，此外键再">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MyFirst">
-<meta property="og:url" content="http://Orange.github.io/2017/06/14/MyFirst/index.html">
+<meta property="og:title" content="PowerDesigner的简单使用方法">
+<meta property="og:url" content="http://Orange.github.io/2017/07/17/PowerDesigner中的关系设置方法/index.html">
 <meta property="og:site_name" content="C++学习小窝">
-<meta property="og:description" content="Hello-World!今天开始让世界看到自己">
-<meta property="og:updated_time" content="2017-06-14T02:39:52.646Z">
+<meta property="og:description" content="（一）CDM的设置 关系的设置首先由2行文字，通过更改各项设置文字会变化，可以看文字的改变是否符合自己的预期效果来确定更改否正确然后是3大版块①版块用来说明2实体间的多对多关系,如果选择1-1则会激活DomiantRole,此时可以选择是谁主表。其余两个版块的②Dependent(依赖)关系判断Dependent(依赖)关系，如果B表dependent于A表，则A的主键进入B表做为外键后，此外键再">
+<meta property="og:image" content="http://orange.github.io/images/PowerDesigner/cdm1.png">
+<meta property="og:image" content="http://orange.github.io/images/PowerDesigner/cdm2.png">
+<meta property="og:image" content="http://orange.github.io/images/PowerDesigner/cdm3.png">
+<meta property="og:image" content="http://orange.github.io/images/PowerDesigner/1.png">
+<meta property="og:image" content="http://orange.github.io/images/PowerDesigner/pdm1.png">
+<meta property="og:image" content="http://orange.github.io/images/PowerDesigner/database1.png">
+<meta property="og:updated_time" content="2017-07-17T08:13:43.942Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MyFirst">
-<meta name="twitter:description" content="Hello-World!今天开始让世界看到自己">
+<meta name="twitter:title" content="PowerDesigner的简单使用方法">
+<meta name="twitter:description" content="（一）CDM的设置 关系的设置首先由2行文字，通过更改各项设置文字会变化，可以看文字的改变是否符合自己的预期效果来确定更改否正确然后是3大版块①版块用来说明2实体间的多对多关系,如果选择1-1则会激活DomiantRole,此时可以选择是谁主表。其余两个版块的②Dependent(依赖)关系判断Dependent(依赖)关系，如果B表dependent于A表，则A的主键进入B表做为外键后，此外键再">
+<meta name="twitter:image" content="http://orange.github.io/images/PowerDesigner/cdm1.png">
 
 
 
@@ -124,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://Orange.github.io/2017/06/14/MyFirst/"/>
+  <link rel="canonical" href="http://Orange.github.io/2017/07/17/PowerDesigner中的关系设置方法/"/>
 
 
 
 
 
-  <title> MyFirst | C++学习小窝 </title>
+  <title> PowerDesigner的简单使用方法 | C++学习小窝 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -249,7 +256,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://Orange.github.io/2017/06/14/MyFirst/">
+    <link itemprop="mainEntityOfPage" href="http://Orange.github.io/2017/07/17/PowerDesigner中的关系设置方法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="OrangeStory">
@@ -270,7 +277,7 @@
             
             
               
-                MyFirst
+                PowerDesigner的简单使用方法
               
             
           </h1>
@@ -285,8 +292,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-14T10:38:37+08:00">
-                2017-06-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-17T14:46:35+08:00">
+                2017-07-17
               </time>
             
 
@@ -321,7 +328,11 @@
       
 
       
-        <p>Hello-World!今天开始让世界看到自己</p>
+        <h2 id="（一）CDM的设置"><a href="#（一）CDM的设置" class="headerlink" title="（一）CDM的设置"></a>（一）CDM的设置</h2><p><img src="/images/PowerDesigner/cdm1.png" alt="&quot;关系&quot;"><br><img src="/images/PowerDesigner/cdm2.png" alt="&quot;关系&quot;"><br><img src="/images/PowerDesigner/cdm3.png" alt="&quot;关系&quot;"></p>
+<h3 id="关系的设置"><a href="#关系的设置" class="headerlink" title="关系的设置"></a>关系的设置</h3><p><img src="/images/PowerDesigner/1.png" alt="&quot;关系&quot;"><br>首先由2行文字，通过更改各项设置文字会变化，可以看文字的改变是否符合自己的预期效果来确定更改否正确<br>然后是3大版块<br>①版块用来说明2实体间的多对多关系,如果选择1-1则会激活DomiantRole,此时可以选择是谁主表。<br>其余两个版块的<br>②Dependent(依赖)关系判断Dependent(依赖)关系，如果B表dependent于A表，则A的主键进入B表做为外键后，此外键再与B表原主键形成新主键。<br>也就是说，B表原主键并不能形成完整主键，只有加上A表主键(外键)后才能共同形成主键。<br>③Mandatroy(强制属性)<br>A表到B表如果是Mandatroy，说明A表中任何一条记录都要对应B表一条记录，也就是说，如果A表中有B表的外键列，则该外键列不能为空。（1,1）关系<br>如果不为Mandatroy，就可以是（0,1）对应关系。</p>
+<h2 id="二-PDM"><a href="#二-PDM" class="headerlink" title="(二)PDM"></a>(二)PDM</h2><p>CDM转PDM方法：TOOLS-&gt;Generate Physical Data Model<br>选择你想用的数据库<br><img src="/images/PowerDesigner/pdm1.png" alt="&quot;关系&quot;"></p>
+<h2 id="三-转为数据库-sql文件"><a href="#三-转为数据库-sql文件" class="headerlink" title="(三)转为数据库.sql文件"></a>(三)转为数据库.sql文件</h2><p>注意要在PDM界面下（不然没有database按钮），选择如图：<br><img src="/images/PowerDesigner/database1.png" alt="&quot;关系&quot;"><br>之后参考链接 <a href="https://jingyan.baidu.com/article/7082dc1c48960ee40a89bd38.html" target="_blank" rel="external">https://jingyan.baidu.com/article/7082dc1c48960ee40a89bd38.html</a><br>贴上一个power designer pdm生成sql脚本和数据库以及逆向工程的链接<br><a href="http://blog.csdn.net/gyb2013/article/details/6920082" target="_blank" rel="external">http://blog.csdn.net/gyb2013/article/details/6920082</a></p>
+<h2 id="四-数据库打开-sql文件（MySql为例）"><a href="#四-数据库打开-sql文件（MySql为例）" class="headerlink" title="(四)数据库打开.sql文件（MySql为例）"></a>(四)数据库打开.sql文件（MySql为例）</h2><h2 id="（二）遇到的问题"><a href="#（二）遇到的问题" class="headerlink" title="（二）遇到的问题"></a>（二）遇到的问题</h2><p>①CDM转PDM 显示 The following entity attribute does not have unique name：编号（学生），编号（国家）<br>解决方法：将2实体的列名改成不一样的，注意列名和code都要不一样！<br>②CDM中不用可以刻意创建一个国家编号的列作为外键，当CDM转PDM时会自动生成</p>
 
       
     </div>
@@ -358,8 +369,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/14/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2017/06/26/c-常见的排序算法（不定期更新）/" rel="next" title="c++常见的排序算法（不定期更新）">
+                <i class="fa fa-chevron-left"></i> c++常见的排序算法（不定期更新）
               </a>
             
           </div>
@@ -367,10 +378,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/06/22/UML各类图形及画法（不定期更新）/" rel="prev" title="UML各类图形及画法（不定期更新）+可行性分析计算">
-                UML各类图形及画法（不定期更新）+可行性分析计算 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -417,8 +424,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/touxiang.png"
@@ -462,6 +478,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#（一）CDM的设置"><span class="nav-number">1.</span> <span class="nav-text">（一）CDM的设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#关系的设置"><span class="nav-number">1.1.</span> <span class="nav-text">关系的设置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-PDM"><span class="nav-number">2.</span> <span class="nav-text">(二)PDM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三-转为数据库-sql文件"><span class="nav-number">3.</span> <span class="nav-text">(三)转为数据库.sql文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四-数据库打开-sql文件（MySql为例）"><span class="nav-number">4.</span> <span class="nav-text">(四)数据库打开.sql文件（MySql为例）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#（二）遇到的问题"><span class="nav-number">5.</span> <span class="nav-text">（二）遇到的问题</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
